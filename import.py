@@ -22,7 +22,7 @@ for i in diary:
     time = 0
     with open(current_path + '\\' + i.title+'.md', "w", encoding="utf-8") as f:
         # 写入日志内容
-        f.write(f"# {i.title}")
+        f.write(f"# {i.title} \n")
         f.write(i.content)
 
         # 查询日记的附件
