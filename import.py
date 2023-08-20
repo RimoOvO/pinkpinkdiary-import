@@ -103,10 +103,10 @@ for i in diary:
         ttime = Time(time.mktime(timeOffsetAndStruct(datetime.fromtimestamp(ttime).strftime("%Y-%m-%d %H:%M:%S"),"%Y-%m-%d %H:%M:%S",0)))
         SetFileTime(hFile, ttime, ttime, ttime)
         CloseHandle(hFile)
-        log("success set file ttime: " + current_path + "\\" + i.title+'.md', "info")
+        log("success set file time: " + current_path + "\\" + i.title+'.md', "info")
     else:
         # 在非 windows 系统中，不支持修改文件创建时间戳
-        log("not windows os, skip set file ttime: " + current_path + "\\" + i.title+'.md', "warn")
+        log("not windows os, skip set file time: " + current_path + "\\" + i.title+'.md', "warn")
     
     log("file output done: " + current_path + "\\" + i.title+'.md', "done")
     
